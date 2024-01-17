@@ -43,5 +43,6 @@ pack1.addItem(new Product(300));
 shop.addItem(pack1);
 const pack2 = new Package();
 pack2.addItem(new Product(30));
+shop.addItem(pack2)
 
 console.log(shop.getPrice())
