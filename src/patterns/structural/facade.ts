@@ -4,7 +4,7 @@ class Notify {
     }
 }
 
-class Log {
+class Logger {
     log(message: string) {
         console.log(message)
     }
@@ -28,7 +28,7 @@ class NotificationFacade {
     constructor() {
         this.notify = new Notify();
         this.template = new Template();
-        this.logger = new Log();
+        this.logger = new Logger();
     }
 
     send(to: string, templateName: string) {
