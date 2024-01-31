@@ -43,7 +43,7 @@ class DraftDocumentItemState extends DocumentItemState {
     }
 
     public publish() {
-        console.log('Text eas sent' + this.item.text);
+        console.log('Text was sent' + this.item.text);
         this.item.setState(new PublishDocumentItemState());
     }
 
