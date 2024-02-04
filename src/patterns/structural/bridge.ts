@@ -43,11 +43,16 @@ class DelayNotificationSender extends NotificationSender {
         super(provider);
     }
     sendDelayed() {
+        setTimeout(() => {
+            console.log('sent after 500 ms');
+            this.send();
+        }, 500)
+
     }
 }
 
 const sender = new NotificationSender(new TelegramProvider() as IProvider);
 sender.send();
 
-const sender2 = new NotificationSender(new WhatsUpProvider() as IProvider);
-sender2.send();
+const sender2 = new DelayNotificationSender(new WhatsUpProvider() as IProvider);
+sender2.sendDelayed();
